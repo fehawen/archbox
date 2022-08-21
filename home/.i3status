@@ -21,6 +21,8 @@ order += "tztime local"
 
 path_exists VPN {
     path = "/proc/sys/net/ipv4/conf/tun0"
+    format = "VPN"
+    format_down = ""
 }
 
 ethernet _first_ {
