@@ -1,0 +1,130 @@
+#
+# i3-gaps config
+#
+
+set $mod Mod4
+floating_modifier $mod
+
+font pango:Hack 9
+
+gaps inner 8
+
+set $c0 #010305
+set $c1 #af5f00
+set $c2 #6d727e
+set $c7 #fff9fa
+set $c8 #323e49
+
+#                        Border Background Foreground Indicator Child Border
+client.focused           $c2    $c2        $c0        $c2       $c2
+client.unfocused         $c8    $c8        $c0        $c8       $c8
+client.focused_inactive  $c8    $c8        $c0        $c8       $c8
+client.urgent            $c2    $c2        $c0        $c2       $c2
+
+focus_follows_mouse no
+
+assign [class="(?i)firefox"] 2
+assign [class="(?i)burpsuite"] 3
+
+for_window [instance="popup"] floating enable
+for_window [instance="popup"] move scratchpad
+exec --no-startup-id i3-sensible-terminal -name popup
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Quit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Shift+q kill
+
+bindsym $mod+p exec i3put
+bindsym $mod+m exec --no-startup-id dmenu_run -i \
+    -nb "$c0" \
+    -nf "$c2" \
+    -sb "$c2" \
+    -sf "$c0" \
+    -fn "Hack-10"
+
+bindsym $mod+Shift+h focus left
+bindsym $mod+Shift+j focus down
+bindsym $mod+Shift+l focus right
+bindsym $mod+Shift+k focus up
+
+bindsym $mod+v split v
+bindsym $mod+b split h
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+
+bindsym $mod+a move left
+bindsym $mod+s move down
+bindsym $mod+w move up
+bindsym $mod+d move right
+
+bindsym $mod+Shift+a resize shrink width 1 px or 1 ppt
+bindsym $mod+Shift+s resize shrink height 1 px or 1 ppt
+bindsym $mod+Shift+w resize grow height 1 px or 1 ppt
+bindsym $mod+Shift+d resize grow width 1 px or 1 ppt
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+bindsym $mod+Shift+x exec i3lock -c "$c0"
+
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bar {
+    position bottom
+    status_command i3status -c ~/.i3status
+    font pango:Hack 10
+    workspace_min_width 22
+    separator_symbol " // "
+    colors {
+        background $c0
+        statusline $c7
+        separator $c1
+
+        focused_workspace $c7 $c7 $c0
+        active_workspace $c2 $c2 $c0
+        inactive_workspace $c8 $c8 $c0
+        urgent_workspace $c1 $c1 $c0
+    }
+}
