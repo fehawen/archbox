@@ -115,16 +115,16 @@ bar {
     position bottom
     status_command i3status -c ~/.i3status
     font pango:Hack 10
-    workspace_min_width 22
+    workspace_min_width 24
     separator_symbol " // "
     colors {
         background $c0
         statusline $c7
         separator $c1
 
-        focused_workspace $c7 $c7 $c0
-        active_workspace $c2 $c2 $c0
-        inactive_workspace $c8 $c8 $c0
-        urgent_workspace $c1 $c1 $c0
+        focused_workspace $c0 $c0 $c7
+        active_workspace $c0 $c0 $c2
+        inactive_workspace $c0 $c0 $c8
+        urgent_workspace $c0 $c0 $c1
     }
 }
