@@ -21,37 +21,37 @@ XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
-XTerm*faceName: xft:monospace:pixelsize=12
-*font: xft:monospace:pixelsize=12
+XTerm*faceName: xft:monospace:size=12
+*font: xft:monospace:size=12
 
 XTerm.vt100.translations: #override \n\
 	Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
 	Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
 
-*.background: #010305
-*.foreground: #fff9fa
-*.cursorColor: #fff9fa
+*.background: #141d2b
+*.foreground: #ffffff
+*.cursorColor: #ffffff
 
-*.color0: #010305
-*.color8: #323e49
+*.color0: #1b2534
+*.color8: #556074
 
-*.color1: #af5f00
-*.color9: #af5f00
+*.color1: #ff2548
+*.color9: #ff2548
 
-*.color2: #6d727e
-*.color10: #6d727e
+*.color2: #9fef00
+*.color10: #9fef00
 
-*.color3: #90909b
-*.color11: #90909b
+*.color3: #ffaf00
+*.color11: #ffaf00
 
-*.color4: #babbba
-*.color12: #babbba
+*.color4: #0086ff
+*.color12: #0086ff
 
-*.color5: #90909b
-*.color13: #90909b
+*.color5: #e800ef
+*.color13: #e800ef
 
-*.color6: #babbba
-*.color14: #babbba
+*.color6: #986ce8
+*.color14: #986ce8
 
-*.color7: #fff9fa
-*.color15: #fff9fa
+*.color7: #ffffff
+*.color15: #ffffff

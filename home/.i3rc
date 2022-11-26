@@ -5,21 +5,22 @@
 set $mod Mod4
 floating_modifier $mod
 
-font pango:Hack 9
+font pango:Hack 12
 
-gaps inner 8
+gaps inner 13
+default_border pixel 1
 
-set $c0 #010305
-set $c1 #af5f00
-set $c2 #6d727e
-set $c7 #fff9fa
-set $c8 #323e49
+set $c0 #111927
+set $c1 #ff2548
+set $c5 #e800ef
+set $c7 #ffffff
+set $c8 #556074
 
 #                        Border Background Foreground Indicator Child Border
-client.focused           $c2    $c2        $c0        $c2       $c2
+client.focused           $c7    $c7        $c0        $c7       $c7
 client.unfocused         $c8    $c8        $c0        $c8       $c8
 client.focused_inactive  $c8    $c8        $c0        $c8       $c8
-client.urgent            $c2    $c2        $c0        $c2       $c2
+client.urgent            $c1    $c1        $c0        $c1       $c1
 
 focus_follows_mouse no
 
@@ -40,10 +41,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p exec i3put
 bindsym $mod+m exec --no-startup-id dmenu_run -i \
     -nb "$c0" \
-    -nf "$c2" \
-    -sb "$c2" \
+    -nf "$c5" \
+    -sb "$c5" \
     -sf "$c0" \
-    -fn "Hack-10"
+    -fn "Hack-12"
 
 bindsym $mod+Shift+h focus left
 bindsym $mod+Shift+j focus down
@@ -114,16 +115,16 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bar {
     position bottom
     status_command i3status -c ~/.i3status
-    font pango:Hack 10
+    font pango:Hack 12
     workspace_min_width 24
     separator_symbol " // "
     colors {
         background $c0
         statusline $c7
-        separator $c1
+        separator $c5
 
         focused_workspace $c0 $c0 $c7
-        active_workspace $c0 $c0 $c2
+        active_workspace $c0 $c0 $c8
         inactive_workspace $c0 $c0 $c8
         urgent_workspace $c0 $c0 $c1
     }

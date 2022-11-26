@@ -20,6 +20,7 @@ ttf-hack
 ttf-opensans
 vim
 virtualbox-guest-utils
+wget
 xorg-xset
 xorg-xsetroot
 xorg-xclipboard
