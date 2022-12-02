@@ -16,7 +16,6 @@ python3
 rust
 shellcheck
 tmux
-ttf-hack
 ttf-opensans
 vim
 virtualbox-guest-utils
@@ -25,3 +24,5 @@ xorg-xset
 xorg-xsetroot
 xorg-xclipboard
 xterm
+npm
+yarn
