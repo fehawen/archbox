@@ -28,30 +28,30 @@ XTerm.vt100.translations: #override \n\
 	Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
 	Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
 
-*.background: #141d2b
-*.foreground: #ffffff
-*.cursorColor: #ffffff
+*.background: #001e3c
+*.foreground: #f8f8f2
+*.cursorcolor: #f8f8f2
 
-*.color0: #1b2534
-*.color8: #556074
+*.color0: #0f2e4b
+*.color8: #b2b2b2
 
-*.color1: #ff2548
-*.color9: #ff2548
+*.color1: #fc929e
+*.color9: #fc929e
 
-*.color2: #9fef00
-*.color10: #9fef00
+*.color2: #a6e22e
+*.color10: #a6e22e
 
-*.color3: #ffaf00
-*.color11: #ffaf00
+*.color3: #e6db74
+*.color11: #e6db74
 
-*.color4: #0086ff
-*.color12: #0086ff
+*.color4: #66d9ef
+*.color12: #66d9ef
 
-*.color5: #e800ef
-*.color13: #e800ef
+*.color5: #b78eff
+*.color13: #b78eff
 
-*.color6: #986ce8
-*.color14: #986ce8
+*.color6: #66d9ef
+*.color14: #66d9ef
 
-*.color7: #ffffff
-*.color15: #ffffff
+*.color7: #f8f8f2
+*.color15: #f8f8f2

@@ -5,16 +5,16 @@
 set $mod Mod4
 floating_modifier $mod
 
-font pango:Hack 12
+font pango:Consolas 12
 
 gaps inner 13
 default_border pixel 1
 
-set $c0 #111927
-set $c1 #ff2548
-set $c5 #e800ef
-set $c7 #ffffff
-set $c8 #556074
+set $c0 #001e3c
+set $c1 #fc929e
+set $c5 #b78eff
+set $c7 #f8f8f2
+set $c8 #b2b2b2
 
 #                        Border Background Foreground Indicator Child Border
 client.focused           $c7    $c7        $c0        $c7       $c7
@@ -113,9 +113,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 bar {
-    position bottom
+    position top
     status_command i3status -c ~/.i3status
-    font pango:Hack 12
+    font pango:Consolas 12
     workspace_min_width 24
     separator_symbol " // "
     colors {
