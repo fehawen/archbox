@@ -2,7 +2,7 @@
 # i3-gaps config
 #
 
-set $mod Mod4
+set $mod Mod1
 floating_modifier $mod
 
 font pango:Consolas 12
@@ -46,10 +46,10 @@ bindsym $mod+m exec --no-startup-id dmenu_run -i \
     -sf "$c0" \
     -fn "Hack-12"
 
-bindsym $mod+Shift+h focus left
-bindsym $mod+Shift+j focus down
-bindsym $mod+Shift+l focus right
-bindsym $mod+Shift+k focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+l focus right
+bindsym $mod+k focus up
 
 bindsym $mod+v split v
 bindsym $mod+b split h
@@ -96,10 +96,10 @@ bindsym $mod+s move down
 bindsym $mod+w move up
 bindsym $mod+d move right
 
-bindsym $mod+Shift+a resize shrink width 1 px or 1 ppt
-bindsym $mod+Shift+s resize shrink height 1 px or 1 ppt
-bindsym $mod+Shift+w resize grow height 1 px or 1 ppt
-bindsym $mod+Shift+d resize grow width 1 px or 1 ppt
+bindsym $mod+Shift+h resize shrink width 1 px or 1 ppt
+bindsym $mod+Shift+j resize shrink height 1 px or 1 ppt
+bindsym $mod+Shift+k resize grow height 1 px or 1 ppt
+bindsym $mod+Shift+l resize grow width 1 px or 1 ppt
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
