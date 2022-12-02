@@ -1,6 +1,7 @@
 dmenu
 firefox
 git
+git-lfs
 gnu-netcat
 go
 i3-gaps
