@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+# shellcheck disable=1090,1091
+
 [[ $- != *i* ]] && return
 
 HISTCONTROL=ignoreboth
@@ -42,5 +44,8 @@ alias gs='git status'
 alias gc='git commit'
 alias gp='git push'
 
-# shellcheck disable=1090
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
