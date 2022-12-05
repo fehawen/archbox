@@ -18,7 +18,7 @@ HISTFILESIZE=2000
 PROMPT_DIRTRIM=3
 
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    PS1='\[\033[01;33m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]\$\[\033[00m\] '
+    PS1='\[\033[36m\]\u@\h\[\033[00m\] \[\033[34m\]\w\[\033[00m\] \[\033[31m\]\$\[\033[00m\] '
 else
     PS1='\u@\h \w \$ '
 fi

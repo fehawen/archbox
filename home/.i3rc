@@ -5,16 +5,16 @@
 set $mod Mod1
 floating_modifier $mod
 
-font pango:Consolas 12
+font pango:SF Mono 12
 
 gaps inner 13
 default_border pixel 1
 
-set $c0 #001e3c
-set $c1 #fc929e
-set $c5 #b78eff
-set $c7 #f8f8f2
-set $c8 #b2b2b2
+set $c0 #f2f2f2
+set $c1 #d73a49
+set $c6 #005cc5
+set $c7 #24292e
+set $c8 #969696
 
 #                        Border Background Foreground Indicator Child Border
 client.focused           $c7    $c7        $c0        $c7       $c7
@@ -41,8 +41,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+p exec i3put
 bindsym $mod+m exec --no-startup-id dmenu_run -i \
     -nb "$c0" \
-    -nf "$c5" \
-    -sb "$c5" \
+    -nf "$c6" \
+    -sb "$c6" \
     -sf "$c0" \
     -fn "Hack-12"
 
@@ -115,13 +115,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bar {
     position top
     status_command i3status -c ~/.i3status
-    font pango:Consolas 12
+    font pango:SF Mono 12
     workspace_min_width 24
-    separator_symbol " // "
+    separator_symbol " │ "
     colors {
         background $c0
         statusline $c7
-        separator $c5
+        separator $c7
 
         focused_workspace $c0 $c0 $c7
         active_workspace $c0 $c0 $c8
