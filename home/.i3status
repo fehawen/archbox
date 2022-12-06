@@ -5,9 +5,9 @@
 general {
     colors = true
     output_format = "i3bar"
-    color_degraded = "#969696"
-    color_good = "#24292e"
-    color_bad = "#d73a49"
+    color_degraded = "#394d70"
+    color_good = "#66d9ef"
+    color_bad = "#fc929e"
     interval = 5
 }
 

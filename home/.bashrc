@@ -15,13 +15,17 @@ HISTFILESIZE=2000
 
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
-PROMPT_DIRTRIM=3
-
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    PS1='\[\033[36m\]\u@\h\[\033[00m\] \[\033[34m\]\w\[\033[00m\] \[\033[31m\]\$\[\033[00m\] '
+    PS1='\[\033[1;34m\]\W\[\033[00m\] -> '
 else
-    PS1='\u@\h \w \$ '
+    PS1='\" -> '
 fi
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+    xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
+    *) ;;
+esac
 
 if [ -x /usr/bin/dircolors ]; then
     if test -r ~/.dircolors; then
