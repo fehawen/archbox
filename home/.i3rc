@@ -117,12 +117,12 @@ bar {
     position top
     status_command i3status -c ~/.i3status
     font pango:JetBrains Mono 12
-    workspace_min_width 24
-    separator_symbol " /// "
+    workspace_min_width 28
+    separator_symbol " // "
     colors {
         background $c0
         statusline $c6
-        separator $c8
+        separator $c1
 
         focused_workspace $c6 $c0 $c6
         active_workspace $c6 $c0 $c6
