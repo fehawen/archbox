@@ -7,6 +7,6 @@ xset m 1/1
 xset +fp ~/.fonts
 xset r rate 200 60
 xrdb -merge ~/.Xresources
-xsetroot -solid "#0a1929"
+xsetroot -solid "#f0e6dc"
 
 exec i3 -c $HOME/.i3rc

@@ -10,15 +10,15 @@ font pango:JetBrains Mono 12
 gaps inner 13
 default_border pixel 1
 
-set $c0 #001e3c
-set $c1 #fc929e
-set $c5 #b78eff
-set $c6 #66d9ef
-set $c7 #f8f8f2
-set $c8 #394d70
+set $c0 #f0e6dc
+set $c1 #dc143c
+set $c5 #663399
+set $c6 #008b8b
+set $c7 #181005
+set $c8 #aea59c
 
 #                        Border Background Foreground Indicator Child Border
-client.focused           $c6    $c6        $c0        $c6       $c6
+client.focused           $c7    $c7        $c0        $c7       $c7
 client.unfocused         $c8    $c8        $c0        $c8       $c8
 client.focused_inactive  $c8    $c8        $c0        $c8       $c8
 client.urgent            $c1    $c1        $c0        $c1       $c1
@@ -121,11 +121,11 @@ bar {
     separator_symbol " // "
     colors {
         background $c0
-        statusline $c6
-        separator $c1
+        statusline $c7
+        separator $c8
 
-        focused_workspace $c6 $c0 $c6
-        active_workspace $c6 $c0 $c6
+        focused_workspace $c7 $c0 $c7
+        active_workspace $c7 $c0 $c7
         inactive_workspace $c8 $c0 $c8
         urgent_workspace $c1 $c0 $c1
     }
