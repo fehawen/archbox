@@ -5,24 +5,26 @@
 set $mod Mod1
 floating_modifier $mod
 
-font pango:SF Mono Bold 12
+font pango:JetBrains Mono Bold 10
 
-gaps inner 13
-default_border pixel 1
+set_from_resource $bg i3wm.background
+set_from_resource $c0 i3wm.color0
+set_from_resource $c1 i3wm.color1
+set_from_resource $c2 i3wm.color2
+set_from_resource $c3 i3wm.color3
+set_from_resource $c4 i3wm.color4
+set_from_resource $c5 i3wm.color5
+set_from_resource $c6 i3wm.color6
+set_from_resource $c7 i3wm.color7
+set_from_resource $c8 i3wm.color8
 
-set $cb #121b1f
-set $c0 #172124
-set $c1 #b56666
-set $c5 #b48291
-set $c6 #7ab1b3
-set $c7 #b2bebf
-set $c8 #566166
+for_window [class=".*"] title_format "%title"
 
 #                        Border Background Foreground Indicator Child Border
-client.focused           $cb    $cb        $c0        $cb       $cb
-client.unfocused         $cb    $cb        $c0        $cb       $cb
-client.focused_inactive  $cb    $cb        $c0        $cb       $cb
-client.urgent            $c1    $c1        $c0        $c1       $c1
+client.focused           $c6    $c0        $c6        $c6       $c6
+client.unfocused         $c6    $c0        $c6        $c6       $c6
+client.focused_inactive  $c6    $c0        $c6        $c6       $c6
+client.urgent            $c1    $c0        $c1        $c1       $c1
 
 focus_follows_mouse no
 
@@ -46,7 +48,7 @@ bindsym $mod+m exec --no-startup-id dmenu_run -i \
     -nf "$c6" \
     -sb "$c6" \
     -sf "$c0" \
-    -fn "Hack-12"
+    -fn "JetBrainsMono-10"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -106,7 +108,7 @@ bindsym $mod+Shift+l resize grow width 1 px or 1 ppt
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-bindsym $mod+Shift+x exec i3lock -c "$c0"
+bindsym $mod+Shift+x exec i3lock -c "$bg"
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -115,19 +117,19 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 bar {
-    position top
+    position bottom
     status_command i3status -c ~/.i3status
-    font pango:SF Mono Bold 12
-    workspace_min_width 28
-    separator_symbol " • "
+    font pango:JetBrains Mono Bold 10
+    workspace_min_width 24
+    separator_symbol " | "
     colors {
-        background $c0
-        statusline $c6
-        separator $c8
+        background $c6
+        statusline $bg
+        separator $c0
 
-        focused_workspace $c0 $c0 $c6
-        active_workspace $c0 $c0 $c6
-        inactive_workspace $c0 $c0 $c8
-        urgent_workspace $c0 $c0 $c1
+        focused_workspace $c6 $c0 $c6
+        active_workspace $c6 $c0 $c6
+        inactive_workspace $c6 $c0 $c8
+        urgent_workspace $c6 $c0 $c1
     }
 }

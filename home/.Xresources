@@ -7,11 +7,11 @@ Xft.lcdfilter: lcddefault
 Xft.antialias: 1
 Xft.rgba: rgb
 
-Xcursor.size: 12
+Xcursor.size: 10
 Xcursor.theme: default
 
 XTerm*termName: xterm-16color
-XTerm*internalBorder: 36
+XTerm*internalBorder: 20
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollbar: false
@@ -21,38 +21,38 @@ XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
-XTerm*faceName: xft:monospace:size=12
-*font: xft:monospace:size=12
+XTerm*faceName: xft:monospace:size=10
+*font: xft:monospace:size=10
 
 XTerm.vt100.translations: #override \n\
 	Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
 	Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
 
-*foreground: #b2bebf
-*background: #1e282c
+*foreground: #f8f8f2
+*background: #001e3c
 
-*cursorColor: #b2bebf
+*cursorcolor: #f8f8f2
 
-*color0: #263034
-*color8: #566166
+*color0: #0f2e4b
+*color8: #b2b2b2
 
-*color1: #b56666
-*color9: #b56666
+*color1: #fc929e
+*color9: #fc929e
 
-*color2: #779687
-*color10: #779687
+*color2: #a6e22e
+*color10: #a6e22e
 
-*color3: #b98675
-*color11: #b98675
+*color3: #e6db74
+*color11: #e6db74
 
-*color4: #5e828f
-*color12: #5e828f
+*color4: #66d9ef
+*color12: #66d9ef
 
-*color5: #b48291
-*color13: #b48291
+*color5: #b78eff
+*color13: #b78eff
 
-*color6: #7ab1b3
-*color14: #7ab1b3
+*color6: #66d9ef
+*color14: #66d9ef
 
-*color7: #b2bebf
-*color15: #b2bebf
+*color7: #f8f8f2
+*color15: #f8f8f2
