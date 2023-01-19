@@ -33,8 +33,8 @@ XTerm.vt100.translations: #override \n\
 
 *cursorcolor: #f8f8f2
 
-*color0: #0f2e4b
-*color8: #b2b2b2
+*color0: #0a2544
+*color8: #394d70
 
 *color1: #fc929e
 *color9: #fc929e
@@ -45,8 +45,8 @@ XTerm.vt100.translations: #override \n\
 *color3: #e6db74
 *color11: #e6db74
 
-*color4: #66d9ef
-*color12: #66d9ef
+*color4: #66b2ff
+*color12: #66b2ff
 
 *color5: #b78eff
 *color13: #b78eff
