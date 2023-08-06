@@ -8,6 +8,9 @@ xset +fp ~/.fonts
 xset r rate 200 60
 xrdb -merge ~/.Xresources
 setxkbmap -layout se
-xsetroot -solid "#001e3c"
+xsetroot -solid "#08090c"
 
-exec i3 -c $HOME/.i3rc
+conky -q -d -c ~/.conky1rc &
+conky -q -d -c ~/.conky2rc &
+
+exec i3 -c ~/.i3rc

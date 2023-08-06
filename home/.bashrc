@@ -16,7 +16,7 @@ HISTFILESIZE=2000
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    PS1='\[\033[1;35m\]\u@\h\[\033[00m\] \[\033[1;34m\]\W\[\033[00m\] \$ '
+    PS1='\[\033[1;30m\]\W\[\033[00m\] \[\033[1;31m\]\$\[\033[00m\] '
 else
     PS1='\W \$ '
 fi

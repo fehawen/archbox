@@ -33,3 +33,4 @@ yarn
 mkfontdir
 zip
 unzip
+conky
