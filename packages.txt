@@ -26,6 +26,10 @@ xorg-xinit
 xorg-xset
 xorg-xsetroot
 xorg-xclipboard
+xorg-mkfontdir
 xterm
 npm
 yarn
+mkfontdir
+zip
+unzip
