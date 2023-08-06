@@ -21,6 +21,8 @@ ttf-opensans
 vim
 virtualbox-guest-utils
 wget
+xorg-server
+xorg-xinit
 xorg-xset
 xorg-xsetroot
 xorg-xclipboard
