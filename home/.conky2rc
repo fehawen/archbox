@@ -20,20 +20,20 @@ conky.config = {
     own_window_type = 'override',
     own_window_title = 'conky2',
     own_window_class = 'Conky',
-    update_interval = 20,
+    update_interval = 10,
     use_xft = true,
     uppercase = false,
 }
 
 conky.text = [[
 //////// \
-${color1}${battery_percent}%${color} \
+${if_match ${battery_percent} < 20}${color2}${else}${color1}${endif}${battery_percent}%${color} \
 ////////// \
 ${color1}${time %a %d %b %H:%M}${color} \
 /////////////////
 ${voffset 7}${alignr}/////// \
 ${if_empty ${exec cat /proc/net/route | grep tun0}}${color2}${else}${color1}${endif}VPN${color} ///////// \
-${color1}IP ${addr enp0s3}${color} \
+${color1}${addr ${gw_iface}}${color} \
 ////////////   \
 
 ]];

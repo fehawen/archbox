@@ -18,12 +18,12 @@ conky.config = {
     own_window_type = 'override',
     own_window_title = 'conky1',
     own_window_class = 'Conky',
-    update_interval = 90,
+    update_interval = 20,
     use_xft = true,
     uppercase = false,
 }
 
 conky.text = [[
- RAM ${memfree} │ SWP ${swapfree} │ SSD ${fs_free /} \
+ ${memfree} │ ${swapfree} │ ${fs_free /} \
 
 ]];

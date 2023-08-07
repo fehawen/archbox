@@ -27,7 +27,7 @@ set_from_resource $c8 i3wm.color8
 
 for_window [class=".*"] title_format "%title"
 
-default_border pixel 1
+default_border pixel 2
 
 #                        Border Background Foreground Indicator Child Border
 client.focused           $c6    $c0        $c1        $c6       $c6
