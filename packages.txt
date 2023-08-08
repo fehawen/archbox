@@ -8,6 +8,7 @@ go
 i3-wm
 i3lock
 i3status
+jq
 man-db
 man-pages
 nodejs
