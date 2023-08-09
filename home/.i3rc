@@ -30,7 +30,7 @@ for_window [class=".*"] title_format "%title"
 default_border pixel 2
 
 #                        Border Background Foreground Indicator Child Border
-client.focused           $c6    $c0        $c1        $c6       $c6
+client.focused           $c7    $c0        $c1        $c7       $c7
 client.unfocused         $c8    $c0        $c8        $c8       $c8
 client.focused_inactive  $c8    $c0        $c8        $c8       $c8
 client.urgent            $c1    $c0        $c1        $c1       $c1

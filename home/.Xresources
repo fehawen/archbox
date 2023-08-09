@@ -15,45 +15,48 @@ XTerm*internalBorder: 30
 XTerm*borderWidth: 0
 XTerm*utf8: true
 XTerm*scrollbar: false
-XTerm*saveLines: 10000
+XTerm*saveLines: 9000
 XTerm*cursorBlink: true
 XTerm*selectToClipboard: true
+XTerm*highlightSelection: true
 XTerm*trimSelection: true
 XTerm*renderFont: true
 XTerm*wideChars: true
 XTerm*visualBell: false
+XTerm*fullscreen: never
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 XTerm*faceName: xft:monospace:size=10
-*font: xft:monospace:size=10
 
-XTerm.vt100.translations: #override \n\
+XTerm*translations: #override \
     Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
-    Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
+    Shift Ctrl <KeyPress> c:select-set(CLIPBOARD) \n\
+    Shift <Btn1Up>: exec-formatted("firefox '%t'", CLIPBOARD)
 
-*foreground: #9cb9de
+*foreground: #c3c7d6
 *background: #08090c
 
-*cursorColor: #9cb9de
+*cursorColor: #c3c7d6
 
 *color0: #090d11
-*color8: #30445c
+*color8: #353944
 
-*color1: #e24358
-*color9: #e24358
+*color1: #aa3f34
+*color9: #aa3f34
 
-*color2: #9cb9de
-*color10: #9cb9de
+*color2: #34804b
+*color10: #34804b
 
-*color3: #9cb9de
-*color11: #9cb9de
+*color3: #977b39
+*color11: #977b39
 
-*color4: #9cb9de
-*color12: #9cb9de
+*color4: #2c577d
+*color12: #2c577d
 
-*color5: #9cb9de
-*color13: #9cb9de
+*color5: #801591
+*color13: #801591
 
-*color6: #9cb9de
-*color14: #9cb9de
+*color6: #127f8a
+*color14: #127f8a
 
-*color7: #9cb9de
-*color15: #9cb9de
+*color7: #c3c7d6
+*color15: #c3c7d6

@@ -7,7 +7,6 @@ export GOBIN=~/bin
 export PATH=~/bin:$PATH
 export EDITOR=vim
 export VISUAL=vim
-export TERM=xterm
 export TERMINAL=xterm
 export BROWSER=firefox
 export LC_ALL=en_US.UTF-8

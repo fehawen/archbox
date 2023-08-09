@@ -1,9 +1,9 @@
 conky.config = {
     alignment = 'top_right',
     background = true,
-    default_color = '#e24358',
-    color1 = '#9cb9de',
-    color2 = '#30445c',
+    default_color = '#801591',
+    color1 = '#c3c7d6',
+    color2 = '#353944',
     double_buffer = true,
     font = 'JetBrains Mono:size=10:style=bold',
     draw_shades = false,
